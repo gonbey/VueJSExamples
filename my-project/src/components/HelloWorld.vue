@@ -3,7 +3,8 @@
     <h1>サンプル作成</h1>
     <input v-model="myname" placeholder="入力してください">
     <p>私は、{{ myname }}です</p>
-    <p>上記文字列は{{myname.Length }}です</p>
+    <p>上記文字列は{{ myname.length }}です</p>
+    <label><input type="checkbox" v-model="myCheckbox">チェックボックスは、 {{ myCheckbox }}</label>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       myname: 'テスト文字列',
+      myCheckbox: false 
     }
   }
 }
